@@ -1,14 +1,16 @@
 """We can Use both to connect with MySQL using pymysql and mysql.connector"""
+"""cursorclass=pymysql.cursors.DictCursor  is used to return output in Dictionary Format"""
 
 import pymysql
 # import mysql.connector
-mydb = pymysql.connect(host = 'localhost',user = 'root',password = 'shiv')
+# mydb = pymysql.connect(host = 'localhost',user = 'root',password = 'shiv')
 # mydb = mysql.connector.connect(host = 'localhost',user = 'root',password = 'shiv')
 
-print(mydb)
+# print(mydb)
 """Output: <pymysql.connections.Connection object at 0x000001BF4E7C12D0>"""
 
 # mydb = mysql.connector.connect(host = 'localhost',user = 'root',password = 'shiv',database = 'py_db')
+# mydb = pymysql.connect(host = 'localhost',user = 'root',password = 'shiv',database = 'py_db', cursorclass=pymysql.cursors.DictCursor)
 mydb = pymysql.connect(host = 'localhost',user = 'root',password = 'shiv',database = 'py_db')
 
 mycursor = mydb.cursor()
