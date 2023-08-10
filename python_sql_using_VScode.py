@@ -96,6 +96,8 @@ for row in myresult:
 
 json_data = json.dumps(result_list)
 print(json_data)
+
+mydb.close()
 """Output:
 [{"teacher_id": 1, "teacher_name": "Kamal", "teacher_email": "kamal@gmail.com", "teacher_phone": "9889876545", 
 "student_id": 1, "student_name": "Rohan", "student_email": "kamal@gmail.com", "teacher_id_key": 1}, 
